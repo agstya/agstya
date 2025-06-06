@@ -18,13 +18,6 @@ I'm a passionate and experienced professional with expertise in **Artificial Int
 - *(Your specific skills and experience in Solution Architecture)*
 
 
-## 🏆 My Projects
-
-- *(Link to Project 1 / Description of Project 1)*
-- *(Link to Project 2 / Description of Project 2)*
-- *(Link to Project 3 / Description of Project 3)*
-
-
 ## 🤝 Let's Collaborate
 
 I'm always excited to connect with fellow innovators and explore opportunities to collaborate on challenging projects in the fields of **Artificial Intelligence**, **System Design**, and **Solution Architecture**.
