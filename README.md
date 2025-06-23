@@ -1,6 +1,6 @@
-- 👋 Hi, I’m @agstya
-- 👀 I’m interested in Cloud Architecture, AI and Data Science
-- 💞️ I’m looking to collaborate on AI projects
+- 👋 Hi, I’m Agastya
+- 👀 I’m interested in AI engineering, architecure.
+- Reach out to me at agastya@utexas.edu for collaboration
 
 
 <!---
