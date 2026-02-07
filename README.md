@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Agastya
-- 👀 I’m interested in AI engineering, architecure.
+- 👀 I’m interested in Agentic AI engineering, architecure.
 - Reach out to me at agastya@utexas.edu for collaboration
 
 
