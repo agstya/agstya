@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agastya Kommanamanchi - Technical Leadership, Engineering Management, and TPM portfolio" />
+  <title>Agastya Kommanamanchi | Technical Leadership</title>
+  <style>
+    :root {
+      --bg: #06142b;
+      --bg-soft: #0b2348;
+      --primary: #7ec8ff;
+      --accent: #5aa9ff;
+      --text: #ebf5ff;
+      --muted: #b7c8de;
+      --card: rgba(10, 27, 58, 0.72);
+      --border: rgba(126, 200, 255, 0.35);
+      --glow: 0 0 40px rgba(90, 169, 255, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1a4f90 0%, transparent 55%),
+        radial-gradient(1000px 500px at 90% 5%, #2c6fbe 0%, transparent 50%),
+        linear-gradient(140deg, var(--bg) 15%, #031025 100%);
+      overflow-x: hidden;
+    }
+
+    .aurora,
+    .aurora::before,
+    .aurora::after {
+      position: fixed;
+      inset: -20vmax;
+      content: "";
+      pointer-events: none;
+      z-index: -1;
+      background: conic-gradient(from 120deg, rgba(126, 200, 255, 0.16), rgba(90, 169, 255, 0.08), rgba(43, 94, 153, 0.18), rgba(126, 200, 255, 0.16));
+      filter: blur(45px);
+      animation: spin 28s linear infinite;
+    }
+
+    .aurora::before {
+      transform: scale(0.7);
+      animation-duration: 38s;
+      opacity: 0.65;
+    }
+
+    .aurora::after {
+      transform: scale(1.2);
+      animation-duration: 48s;
+      opacity: 0.5;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 34px 0 72px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(130deg, rgba(15, 39, 82, 0.82), rgba(9, 24, 52, 0.65));
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: var(--glow);
+      backdrop-filter: blur(8px);
+      animation: rise 0.8s ease-out;
+    }
+
+    .badge {
+      width: fit-content;
+      border: 1px solid rgba(126, 200, 255, 0.5);
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      letter-spacing: 0.2px;
+      background: rgba(21, 55, 103, 0.5);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 4vw, 3.1rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+      max-width: 78ch;
+    }
+
+    .pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pillars span {
+      border: 1px solid rgba(126, 200, 255, 0.35);
+      background: rgba(6, 26, 56, 0.68);
+      padding: 8px 12px;
+      border-radius: 12px;
+      color: #d5ebff;
+      font-size: 0.94rem;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #041021;
+      background: linear-gradient(180deg, #b8e6ff, #8ecfff);
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 8px 20px rgba(98, 187, 255, 0.25);
+    }
+
+    .links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(98, 187, 255, 0.38);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      grid-column: span 12;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 22px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 12px 24px rgba(4, 14, 29, 0.35);
+      animation: rise 0.9s ease-out;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #d9edff;
+    }
+
+    .highlights {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding-left: 18px;
+      color: #d6e7fb;
+    }
+
+    .xp {
+      display: grid;
+      gap: 14px;
+    }
+
+    .xp-item {
+      border-left: 3px solid rgba(126, 200, 255, 0.5);
+      padding-left: 12px;
+    }
+
+    .xp-item h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #eaf4ff;
+    }
+
+    .xp-item p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .kpi {
+      border: 1px solid rgba(126, 200, 255, 0.35);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(5, 21, 46, 0.7);
+      text-align: center;
+    }
+
+    .kpi strong {
+      display: block;
+      font-size: 1.35rem;
+      color: #bfe5ff;
+    }
+
+    .kpi span { color: var(--muted); font-size: 0.9rem; }
+
+    .leadership { grid-column: span 7; }
+    .journey { grid-column: span 5; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      color: #b5c5db;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .leadership, .journey { grid-column: span 12; }
+      .hero { padding: 24px; }
+      .container { width: min(1100px, 94%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <main class="container">
+    <section class="hero">
+      <span class="badge">US Patent Holder • Secure Enterprise RAG Architecture</span>
+      <h1>Agastya Kommanamanchi</h1>
+      <p class="subtitle">
+        Technical leadership professional driving enterprise AI outcomes at the intersection of engineering management, product strategy, and TPM execution.
+      </p>
+      <div class="pillars" aria-label="Core strengths">
+        <span>Technical Leadership</span>
+        <span>Engineering Management</span>
+        <span>Technical Program Management (TPM)</span>
+        <span>Enterprise AI Delivery</span>
+      </div>
+      <nav class="links" aria-label="Primary links">
+        <a href="mailto:kommanamanchi.agastya@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/agastya-kommanamanchi/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/agstya" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.credly.com/users/agastya/badges" target="_blank" rel="noreferrer">Credly</a>
+      </nav>
+    </section>
+
+    <section class="grid">
+      <article class="card leadership">
+        <h2>Leadership Impact</h2>
+        <ul class="highlights">
+          <li>Leads forward deployed engineering programs that align AI platform investments with executive business priorities.</li>
+          <li>Drives cross-functional execution across product, engineering, architecture, and operations teams.</li>
+          <li>Owns end-to-end delivery for production AI systems on AWS and GCP, from roadmap through adoption.</li>
+          <li>Builds governance-first AI operating models with RBAC, policy controls, and evaluation frameworks.</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><strong>95%+</strong><span>Task Success in GenAI Workflows</span></div>
+          <div class="kpi"><strong>40%</strong><span>Latency Reduction</span></div>
+          <div class="kpi"><strong>25%</strong><span>Inference Cost Reduction</span></div>
+          <div class="kpi"><strong>$1.2M+</strong><span>Annual Cloud Savings Delivered</span></div>
+        </div>
+      </article>
+
+      <article class="card journey">
+        <h2>Career Highlights</h2>
+        <div class="xp">
+          <div class="xp-item">
+            <h3>Staff AI Architect & Product Leader • The Hartford</h3>
+            <p>Enterprise Copilot enablement, agentic remediation workflows, and scalable RAG systems for underwriting transformation.</p>
+          </div>
+          <div class="xp-item">
+            <h3>Senior Consultant • Accenture (PSEG)</h3>
+            <p>Built cloud data and ML products with measurable business impact, including 12% retention lift and $4.5M recovery.</p>
+          </div>
+          <div class="xp-item">
+            <h3>Senior Cloud Architect • Cognizant</h3>
+            <p>Led multi-cloud FinOps platform delivery and event-driven modernization for large engineering organizations.</p>
+          </div>
+          <div class="xp-item">
+            <h3>Deputy Manager, Data Science • Reliance Jio</h3>
+            <p>Scaled distributed analytics and recommendation systems for 50M+ users and 10TB/day telemetry workloads.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Built for GitHub Pages • Focused on technical leadership, engineering management, and TPM excellence.
+    </footer>
+  </main>
+</body>
+</html>
